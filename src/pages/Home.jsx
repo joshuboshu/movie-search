@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPopularMovies = async () => {
       try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=039ae0713b0189a47ef7f54913e70d22`);
+        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=TU_API_KEY`);
         if (!response.ok) throw new Error('Failed to fetch popular movies');
         const data = await response.json();
         setPopularMovies(data.results);
@@ -24,7 +24,7 @@ const Home = () => {
 
   const handleSearch = async (query) => {
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=039ae0713b0189a47ef7f54913e70d22&query=${query}`);
+      const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=TU_API_KEY&query=${query}`);
       if (!response.ok) throw new Error('Failed to search movies');
       const data = await response.json();
       setMovies(data.results);
