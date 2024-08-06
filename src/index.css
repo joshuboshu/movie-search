@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1F1F1F; /* Fondo oscuro */
+  color: #F9FAFB; /* Color del texto */
+  font-family: 'Arial', sans-serif;
+}
+
+input:focus,
+button:hover {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input:focus {
+  transform: scale(1.02);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .search-bar {
+    padding: 1rem;
+  }
+
+  .search-bar input {
+    font-size: 0.875rem;
+  }
+
+  .search-bar button {
+    font-size: 0.875rem;
+  }
+
+  .search-bar .suggestions {
+    top: 100%;
+    width: 100%;
+  }
+}
